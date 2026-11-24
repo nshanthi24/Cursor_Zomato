@@ -1,0 +1,8 @@
+{
+  "budget_low_max": 500,
+  "budget_medium_max": 1500,
+  "dataset_id": "ManikaSaini/zomato-restaurant-recommendation",
+  "dataset_revision": "5738e9eda2fad49ad51c6e0ed26e761d9b947133",
+  "row_count": 12494,
+  "schema_version": 2
+}

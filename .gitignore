@@ -1,9 +1,8 @@
 # Secrets
 .env
 
-# Generated catalog snapshot
-data/catalog.parquet
-data/catalog.meta.json
+# Catalog snapshot is committed so Railway can boot without an OOM-prone
+# on-start Hugging Face download. Rebuild locally with: python -m app.catalog
 
 # Caches and local environments
 .venv/

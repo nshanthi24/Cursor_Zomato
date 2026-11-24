@@ -20,7 +20,7 @@ RUN pip install --upgrade pip \
     && pip install . \
     && chmod +x scripts/start.sh
 
-# data/ may only contain .gitkeep; start.sh builds the catalog when parquet is missing.
+# Prefer a prebuilt catalog.parquet in the image (avoids OOM on free-tier boot).
 COPY data ./data
 
 EXPOSE 8000
