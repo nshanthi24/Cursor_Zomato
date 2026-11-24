@@ -1,0 +1,23 @@
+# Secrets
+.env
+
+# Generated catalog snapshot
+data/catalog.parquet
+data/catalog.meta.json
+
+# Caches and local environments
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.pytest_tmp/
+.mypy_cache/
+.ruff_cache/
+.cache/
+.huggingface/
+*.egg-info/
+dist/
+build/
+.coverage
+htmlcov/

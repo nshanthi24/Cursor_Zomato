@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><title>Thindi</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-surface":"#e9e1dd","surface-container-highest":"#383431","secondary-fixed":"#ffddb1","on-secondary-fixed-variant":"#614000","inverse-on-surface":"#34302d","outline-variant":"#59413a","primary-fixed":"#ffdbd0","primary-container":"#f26430","primary":"#ffb59d","outline":"#a88a81","inverse-primary":"#ac3500","primary-fixed-dim":"#ffb59d","on-tertiary":"#00344c","surface-dim":"#161311","surface-variant":"#383431","on-tertiary-fixed":"#001e2e","tertiary":"#85cfff","on-primary-fixed-variant":"#832600","on-primary-container":"#511400","tertiary-container":"#1a9ad4","secondary-fixed-dim":"#f2be71","secondary-container":"#684400","on-background":"#e9e1dd","error-container":"#93000a","on-error-container":"#ffdad6","on-secondary-container":"#e6b367","inverse-surface":"#e9e1dd","on-surface-variant":"#e1bfb5","background":"#161311","surface-container-lowest":"#100e0c","surface-bright":"#3d3836","on-secondary":"#442b00","on-primary":"#5d1800","surface-container-low":"#1e1b19","on-tertiary-container":"#002d42","on-tertiary-fixed-variant":"#004c6c","on-secondary-fixed":"#291800","surface":"#161311","on-primary-fixed":"#390c00","error":"#ffb4ab","tertiary-fixed":"#c7e7ff","tertiary-fixed-dim":"#85cfff","surface-container":"#221f1d","secondary":"#f2be71","on-error":"#690005","surface-tint":"#ffb59d","surface-container-high":"#2d2927"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-sm":"0.5rem","space-xl":"2rem","space-lg":"1.5rem","margin":"1.5rem","gutter":"1rem","space-xs":"0.25rem","space-md":"1rem"},"fontFamily":{"label-md":["Plus Jakarta Sans"],"headline-md":["Playfair Display"],"body-sm":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"headline-lg":["Playfair Display"],"display-lg-mobile":["Playfair Display"],"headline-sm":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"display-lg":["Playfair Display"]},"fontSize":{"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"500"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-lg-mobile":["34px",{"lineHeight":"42px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"title-md":["18px",{"lineHeight":"24px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface text-on-surface font-body-md text-body-md min-h-screen antialiased" style="background-image: radial-gradient(circle at 50% 0%, rgba(242, 100, 48, 0.06), transparent 65%);"><main class="w-full max-w-[920px] mx-auto px-margin py-space-xl"><div class="flex flex-col w-full">
+<!-- BrandHeader -->
+<header class="flex flex-col gap-space-xs mb-space-xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary">Bangalore listings</span>
+<h1 class="font-display-lg text-display-lg text-on-surface">Thindi</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-space-xs">
+      Pick a locality, cuisine, and budget. We narrow the catalog first, then rank a short list with a written note for each place.
+    </p>
+</header>
+<!-- Form Card -->
+<section class="bg-surface-container rounded-xl p-space-lg md:p-space-xl shadow-md mb-space-xl">
+<form class="flex flex-col gap-space-lg" id="thindi-form">
+<!-- Two-column row: Location & Cuisine -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-lg text-label-lg text-on-surface" for="location-select">
+            Location <span class="text-primary-container">*</span>
+</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container-low text-on-surface font-body-md text-body-md rounded-xl px-space-md py-3 pr-10 focus:outline-none focus:bg-surface-container-high transition-colors cursor-pointer" id="location-select" required="">
+<option selected="" value="Indiranagar">Indiranagar</option>
+<option value="Koramangala">Koramangala</option>
+<option value="Jayanagar">Jayanagar</option>
+<option value="Malleshwaram">Malleshwaram</option>
+<option value="Sadashivanagar">Sadashivanagar</option>
+<option value="Church Street">Church Street</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-lg text-label-lg text-on-surface" for="cuisine-select">
+            Cuisine <span class="text-primary-container">*</span>
+</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container-low text-on-surface font-body-md text-body-md rounded-xl px-space-md py-3 pr-10 focus:outline-none focus:bg-surface-container-high transition-colors cursor-pointer" id="cuisine-select" required="">
+<option selected="" value="South Indian">South Indian</option>
+<option value="Karnataka Military">Karnataka Military</option>
+<option value="Modern Indian">Modern Indian</option>
+<option value="Filter Coffee &amp; Tiffin">Filter Coffee &amp; Tiffin</option>
+<option value="Coastal &amp; Mangalorean">Coastal &amp; Mangalorean</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+<!-- ChoiceGroup: Budget for two -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface">Budget for two</span>
+<div aria-label="Budget for two" class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm" role="radiogroup">
+<label class="budget-option cursor-pointer">
+<input class="sr-only" name="budget" type="radio" value="Low (≤ ₹500)"/>
+<div class="choice-pill flex items-center justify-center rounded-xl py-2.5 px-space-md font-label-lg text-label-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all">
+              Low (≤ ₹500)
+            </div>
+</label>
+<label class="budget-option cursor-pointer">
+<input checked="" class="sr-only" name="budget" type="radio" value="Medium (₹501–₹1500)"/>
+<div class="choice-pill flex items-center justify-center rounded-xl py-2.5 px-space-md font-label-lg text-label-lg bg-primary-container text-on-surface shadow-sm transition-all">
+              Medium (₹501–₹1500)
+            </div>
+</label>
+<label class="budget-option cursor-pointer">
+<input class="sr-only" name="budget" type="radio" value="High (&gt; ₹1500)"/>
+<div class="choice-pill flex items-center justify-center rounded-xl py-2.5 px-space-md font-label-lg text-label-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all">
+              High (&gt; ₹1500)
+            </div>
+</label>
+</div>
+</div>
+<!-- Two-column row: Minimum rating & Veg preference -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-lg text-label-lg text-on-surface" for="rating-input">Minimum rating</label>
+<div class="relative">
+<input class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md rounded-xl px-space-md py-2.5 pr-10 focus:outline-none focus:bg-surface-container-high transition-colors" id="rating-input" max="5" min="0" step="0.1" type="number" value="4.0"/>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-secondary text-base pointer-events-none" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface">Veg preference</span>
+<div aria-label="Veg preference" class="grid grid-cols-3 gap-space-sm" role="radiogroup">
+<label class="veg-option cursor-pointer">
+<input class="sr-only" name="veg" type="radio" value="Any"/>
+<div class="choice-pill flex items-center justify-center rounded-xl py-2.5 px-space-sm font-label-lg text-label-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all">
+                Any
+              </div>
+</label>
+<label class="veg-option cursor-pointer">
+<input checked="" class="sr-only" name="veg" type="radio" value="Pure veg"/>
+<div class="choice-pill flex items-center justify-center rounded-xl py-2.5 px-space-sm font-label-lg text-label-lg bg-primary-container text-on-surface shadow-sm transition-all">
+                Pure veg
+              </div>
+</label>
+<label class="veg-option cursor-pointer">
+<input class="sr-only" name="veg" type="radio" value="Veg &amp; Non-veg"/>
+<div class="choice-pill flex items-center justify-center rounded-xl py-2.5 px-space-sm font-label-lg text-label-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all truncate">
+                Veg &amp; Non-veg
+              </div>
+</label>
+</div>
+</div>
+</div>
+<!-- TextAreaField: Additional preferences -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-lg text-label-lg text-on-surface" for="preferences-input">
+          Additional preferences <span class="font-body-sm text-body-sm text-on-surface-variant font-normal">(optional)</span>
+</label>
+<textarea class="w-full bg-surface-container-low text-on-surface placeholder-outline font-body-md text-body-md rounded-xl px-space-md py-3 focus:outline-none focus:bg-surface-container-high transition-colors resize-none" id="preferences-input" placeholder="Filter coffee, crispy dosa, quiet seating" rows="2"></textarea>
+</div>
+<!-- PrimaryButton -->
+<div class="flex justify-end pt-space-xs">
+<button class="w-full sm:w-auto bg-primary-container hover:bg-inverse-primary text-on-surface font-label-lg text-label-lg px-space-xl py-3 rounded-xl shadow-sm transition-all flex items-center justify-center gap-space-sm cursor-pointer active:scale-[0.99]" id="find-btn" type="submit">
+<span>Find restaurants</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+</div>
+</form>
+</section>
+<!-- Results Section -->
+<section aria-live="polite" class="flex flex-col gap-space-md">
+<p class="font-body-md text-body-md text-on-surface-variant" id="summary-text">
+      Showing 5 ranked places in Indiranagar · South Indian · Medium (₹501–₹1500) · 4.0★+
+    </p>
+<div class="flex flex-col gap-space-md" id="results-list">
+<!-- Card 1 -->
+<article class="result-card bg-surface-container hover:bg-surface-container-high rounded-xl p-space-lg transition-all duration-200 shadow-sm hover:shadow-md flex flex-col gap-space-sm">
+<div class="flex flex-wrap items-baseline justify-between gap-space-sm">
+<div class="flex items-baseline gap-space-sm min-w-0">
+<span class="font-headline-md text-headline-md text-secondary">01</span>
+<h2 class="font-headline-md text-headline-md text-on-surface truncate">MTR 1924 (Indiranagar)</h2>
+</div>
+<div class="flex items-center gap-space-md shrink-0">
+<span class="inline-flex items-center gap-1 font-label-lg text-label-lg text-secondary">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+              4.7
+            </span>
+<span class="bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm px-2.5 py-1 rounded-full uppercase tracking-wider">Pure Veg</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-1 font-body-sm text-body-sm text-on-surface-variant">
+<span>Indiranagar · 100 Feet Road</span>
+<span>•</span>
+<span>South Indian</span>
+<span>•</span>
+<span class="text-on-surface font-medium">₹750 for two</span>
+<span class="text-outline">(Medium)</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-space-xs">
+          The Indiranagar outpost preserves the Lalbagh original's exacting standards: crisp rava idlis steamed in brass, ghee-laced masala dosas, and decoction filter coffee poured with theatre.
+        </p>
+</article>
+<!-- Card 2 -->
+<article class="result-card bg-surface-container hover:bg-surface-container-high rounded-xl p-space-lg transition-all duration-200 shadow-sm hover:shadow-md flex flex-col gap-space-sm">
+<div class="flex flex-wrap items-baseline justify-between gap-space-sm">
+<div class="flex items-baseline gap-space-sm min-w-0">
+<span class="font-headline-md text-headline-md text-secondary">02</span>
+<h2 class="font-headline-md text-headline-md text-on-surface truncate">Filter Coffee &amp; Tiffin Room</h2>
+</div>
+<div class="flex items-center gap-space-md shrink-0">
+<span class="inline-flex items-center gap-1 font-label-lg text-label-lg text-secondary">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+              4.5
+            </span>
+<span class="bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm px-2.5 py-1 rounded-full uppercase tracking-wider">Pure Veg</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-1 font-body-sm text-body-sm text-on-surface-variant">
+<span>Indiranagar · 12th Main</span>
+<span>•</span>
+<span>South Indian</span>
+<span>•</span>
+<span class="text-on-surface font-medium">₹650 for two</span>
+<span class="text-outline">(Medium)</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-space-xs">
+          A sunlit corner room with quiet wooden tables, serving single-estate Chikmagalur filter coffee alongside lacy benne dosas and deeply spiced pongal.
+        </p>
+</article>
+<!-- Card 3 -->
+<article class="result-card bg-surface-container hover:bg-surface-container-high rounded-xl p-space-lg transition-all duration-200 shadow-sm hover:shadow-md flex flex-col gap-space-sm">
+<div class="flex flex-wrap items-baseline justify-between gap-space-sm">
+<div class="flex items-baseline gap-space-sm min-w-0">
+<span class="font-headline-md text-headline-md text-secondary">03</span>
+<h2 class="font-headline-md text-headline-md text-on-surface truncate">Udupi Nalapaka</h2>
+</div>
+<div class="flex items-center gap-space-md shrink-0">
+<span class="inline-flex items-center gap-1 font-label-lg text-label-lg text-secondary">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+              4.3
+            </span>
+<span class="bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm px-2.5 py-1 rounded-full uppercase tracking-wider">Pure Veg</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-1 font-body-sm text-body-sm text-on-surface-variant">
+<span>Indiranagar · CMH Road</span>
+<span>•</span>
+<span>South Indian</span>
+<span>•</span>
+<span class="text-on-surface font-medium">₹600 for two</span>
+<span class="text-outline">(Medium)</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-space-xs">
+          Unfussy coastal Udupi comfort—banana-leaf meals at lunch, and evening tiffin featuring crisp maddur vada and bisibele bath with roasted cashews.
+        </p>
+</article>
+<!-- Card 4 -->
+<article class="result-card bg-surface-container hover:bg-surface-container-high rounded-xl p-space-lg transition-all duration-200 shadow-sm hover:shadow-md flex flex-col gap-space-sm">
+<div class="flex flex-wrap items-baseline justify-between gap-space-sm">
+<div class="flex items-baseline gap-space-sm min-w-0">
+<span class="font-headline-md text-headline-md text-secondary">04</span>
+<h2 class="font-headline-md text-headline-md text-on-surface truncate">Arogya Ahaara</h2>
+</div>
+<div class="flex items-center gap-space-md shrink-0">
+<span class="inline-flex items-center gap-1 font-label-lg text-label-lg text-secondary">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+              4.2
+            </span>
+<span class="bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm px-2.5 py-1 rounded-full uppercase tracking-wider">Pure Veg</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-1 font-body-sm text-body-sm text-on-surface-variant">
+<span>Indiranagar · Defence Colony</span>
+<span>•</span>
+<span>South Indian</span>
+<span>•</span>
+<span class="text-on-surface font-medium">₹550 for two</span>
+<span class="text-outline">(Medium)</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-space-xs">
+          Known for millet-forward tiffins and remarkably light pesarattu, tucked into a leafy residential lane away from the 100 Feet Road clatter.
+        </p>
+</article>
+<!-- Card 5 -->
+<article class="result-card bg-surface-container hover:bg-surface-container-high rounded-xl p-space-lg transition-all duration-200 shadow-sm hover:shadow-md flex flex-col gap-space-sm">
+<div class="flex flex-wrap items-baseline justify-between gap-space-sm">
+<div class="flex items-baseline gap-space-sm min-w-0">
+<span class="font-headline-md text-headline-md text-secondary">05</span>
+<h2 class="font-headline-md text-headline-md text-on-surface truncate">The Rameshwaram Cafe</h2>
+</div>
+<div class="flex items-center gap-space-md shrink-0">
+<span class="inline-flex items-center gap-1 font-label-lg text-label-lg text-secondary">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+              4.1
+            </span>
+<span class="bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm px-2.5 py-1 rounded-full uppercase tracking-wider">Pure Veg</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-1 font-body-sm text-body-sm text-on-surface-variant">
+<span>Indiranagar · 12th Main</span>
+<span>•</span>
+<span>South Indian</span>
+<span>•</span>
+<span class="text-on-surface font-medium">₹550 for two</span>
+<span class="text-outline">(Medium)</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-space-xs">
+          High-energy late-night standby famous for its unapologetically generous ghee podi idli and blistered garlic roast dosa.
+        </p>
+</article>
+</div>
+</section>
+</div>
+<script>
+  (function () {
+    const syncChoiceGroup = (groupName) => {
+      const inputs = document.querySelectorAll(`input[name="${groupName}"]`);
+      const updateStyles = () => {
+        inputs.forEach((input) => {
+          const pill = input.nextElementSibling;
+          if (!pill) return;
+          if (input.checked) {
+            pill.classList.remove('bg-surface-container-low', 'text-on-surface-variant', 'hover:bg-surface-container-high', 'hover:text-on-surface');
+            pill.classList.add('bg-primary-container', 'text-on-surface', 'shadow-sm');
+          } else {
+            pill.classList.remove('bg-primary-container', 'text-on-surface', 'shadow-sm');
+            pill.classList.add('bg-surface-container-low', 'text-on-surface-variant', 'hover:bg-surface-container-high', 'hover:text-on-surface');
+          }
+        });
+      };
+      inputs.forEach((input) => input.addEventListener('change', updateStyles));
+    };
+
+    syncChoiceGroup('budget');
+    syncChoiceGroup('veg');
+
+    const form = document.getElementById('thindi-form');
+    const summaryText = document.getElementById('summary-text');
+    const cards = document.querySelectorAll('.result-card');
+
+    if (form && summaryText) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const location = document.getElementById('location-select').value;
+        const cuisine = document.getElementById('cuisine-select').value;
+        const budget = document.querySelector('input[name="budget"]:checked')?.value || 'Medium (₹501–₹1500)';
+        const rating = parseFloat(document.getElementById('rating-input').value || '4.0').toFixed(1);
+
+        summaryText.textContent = `Showing 5 ranked places in ${location} · ${cuisine} · ${budget} · ${rating}★+`;
+
+        cards.forEach((card, idx) => {
+          card.classList.add('opacity-0', 'translate-y-2');
+          setTimeout(() => {
+            card.classList.remove('opacity-0', 'translate-y-2');
+          }, 60 * (idx + 1));
+        });
+      });
+    }
+  })();
+</script></main></body></html>

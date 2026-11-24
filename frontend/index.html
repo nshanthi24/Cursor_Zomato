@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Thindi — Bangalore restaurant picks</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="brand-header">
+        <span class="eyebrow">Bangalore listings</span>
+        <h1 class="brand">Thindi</h1>
+        <p class="lede">
+          Pick a locality, cuisine, and budget. We narrow the catalog first, then
+          rank a short list with a written note for each place.
+        </p>
+      </header>
+
+      <section class="form-card">
+        <form id="prefs-form" class="prefs-form" novalidate>
+          <div class="field-row">
+            <label class="field">
+              <span class="field-label">Location <em class="req">*</em></span>
+              <div class="select-wrap">
+                <select id="location" name="location" required disabled>
+                  <option value="">Loading locations…</option>
+                </select>
+                <span class="material-symbols-outlined select-icon">expand_more</span>
+              </div>
+            </label>
+
+            <label class="field">
+              <span class="field-label">Cuisine <em class="req">*</em></span>
+              <div class="select-wrap">
+                <select id="cuisine" name="cuisine" required disabled>
+                  <option value="">Loading cuisines…</option>
+                </select>
+                <span class="material-symbols-outlined select-icon">expand_more</span>
+              </div>
+            </label>
+          </div>
+
+          <fieldset class="field">
+            <legend class="field-label">Budget for two</legend>
+            <div class="choice-grid choice-grid-3" role="radiogroup" aria-label="Budget for two">
+              <label class="choice">
+                <input type="radio" name="budget" value="low" required />
+                <span id="budget-low-label" class="choice-pill">Low (≤ ₹500)</span>
+              </label>
+              <label class="choice">
+                <input type="radio" name="budget" value="medium" checked />
+                <span id="budget-medium-label" class="choice-pill">Medium (₹501–₹1500)</span>
+              </label>
+              <label class="choice">
+                <input type="radio" name="budget" value="high" />
+                <span id="budget-high-label" class="choice-pill">High (&gt; ₹1500)</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="field-row">
+            <label class="field">
+              <span class="field-label">Minimum rating</span>
+              <div class="input-wrap">
+                <input
+                  id="min_rating"
+                  name="min_rating"
+                  type="number"
+                  min="0"
+                  max="5"
+                  step="0.1"
+                  value="4.0"
+                  required
+                />
+                <span class="material-symbols-outlined input-icon filled">star</span>
+              </div>
+            </label>
+
+            <fieldset class="field">
+              <legend class="field-label">Veg preference</legend>
+              <div class="choice-grid choice-grid-3" role="radiogroup" aria-label="Veg preference">
+                <label class="choice">
+                  <input type="radio" name="veg_type" value="any" checked required />
+                  <span class="choice-pill">Any</span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="veg_type" value="pure_veg" />
+                  <span class="choice-pill">Pure veg</span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="veg_type" value="veg_and_non_veg" />
+                  <span class="choice-pill">Veg &amp; Non-veg</span>
+                </label>
+              </div>
+            </fieldset>
+          </div>
+
+          <label class="field">
+            <span class="field-label">
+              Additional preferences
+              <span class="optional">(optional)</span>
+            </span>
+            <textarea
+              id="additional_preferences"
+              name="additional_preferences"
+              rows="2"
+              maxlength="500"
+              placeholder="Filter coffee, crispy dosa, quiet seating"
+            ></textarea>
+          </label>
+
+          <div class="actions">
+            <p id="form-status" class="form-status" aria-live="polite"></p>
+            <button id="submit-btn" class="primary-btn" type="submit" disabled>
+              <span>Find restaurants</span>
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section id="results" class="results" hidden aria-live="polite">
+        <div id="results-banner" class="results-banner" hidden></div>
+        <p id="summary" class="summary"></p>
+        <div id="cards" class="cards"></div>
+      </section>
+    </main>
+    <script src="./config.js"></script>
+    <script src="./app.js" defer></script>
+  </body>
+</html>
